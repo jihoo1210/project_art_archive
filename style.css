@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+* {
+    font-family: "Noto Serif KR", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* header */
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    outline: 0;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    box-shadow: none !important;
+}
+
+/* img-section */
+
+.img-section {
+    position: relative;
+}
+
+.img-section::after {
+    content: '';
+    display: block;
+    padding-bottom: 60%;
+}
+
+.img-section img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* main */
+/* article */
+main .main-section-content {
+    position: relative;
+    opacity: 0;
+    transform: translateY(-30%);
+}
+
+main .main-section-content::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+main .main-section-content img {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    object-fit: cover;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* download */
+main .download-section-content {
+    position: relative;
+    transform: translateY(-30%);
+    opacity: 0;
+    cursor: pointer;
+    overflow-x: hidden;
+}
+
+main .download-section-content::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+main .download-section-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .download-section-content p {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-150%, -50%);
+
+    transition: transform .3s ease-in-out;
+}
+
+main .download-section-content img:hover + p, main .download-section-content p:hover{
+    transform: translate(-50%, -50%);
+}
