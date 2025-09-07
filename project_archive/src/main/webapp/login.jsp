@@ -77,7 +77,7 @@
 		</div>
 	</main>
 	<script>
-    	<c:if text="${not empty sessionScope.isResiste}">
+    	<c:if test="${not empty sessionScope.isResiste}">
     		alert("${sessionScope.isResiste}");
     	</c:if>
     </script>
