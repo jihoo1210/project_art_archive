@@ -1,5 +1,5 @@
 $(function () {
-    $('.img-section').css({
+    $('.img-section, #login-section').css({
         'margin-top': $('header').height() * 1.5 + 'px'
     });
 

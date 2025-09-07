@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
@@ -69,7 +70,6 @@ main .download-section-content {
     position: relative;
     transform: translateY(-30%);
     opacity: 0;
-    cursor: pointer;
     overflow-x: hidden;
 }
 
@@ -79,11 +79,25 @@ main .download-section-content::after {
     padding-bottom: 100%;
 }
 
+main .download-section-content div {
+    width: 90%;
+    height: 90%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    overflow-x: hidden;
+
+    cursor: pointer;
+}
+
 main .download-section-content img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+
     position: absolute;
     left: 50%;
     top: 50%;
@@ -94,15 +108,47 @@ main .download-section-content p {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
-    
+
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-150%, -50%);
 
-    transition: transform .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 2.5em;
+    color: aliceblue;
+
+    transition: transform .3s linear;
 }
 
-main .download-section-content img:hover + p, main .download-section-content p:hover{
+main .download-section-content img:hover+p,
+main .download-section-content p:hover {
     transform: translate(-50%, -50%);
+}
+
+/* login */
+
+#login-body {
+    background-image: url("../img/John_Everett_Millais_-_Ophelia_-_Google_Art_Project.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#login-body .max-w-75 {
+    max-width: 75%;
+}
+
+#login-body .form-check-input:checked {
+    background-color: #212529;;
+    border-color: #212529;;
+}
+
+#login-body .form-check-input:focus {
+    border: none !important;
+    outline: 0;
+    box-shadow: 0 0 0 0 !important;
 }
